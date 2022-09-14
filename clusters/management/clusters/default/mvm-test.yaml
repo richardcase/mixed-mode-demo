@@ -13,19 +13,19 @@ spec:
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
-  name: mvm-test
-  namespace: default
   labels:
     cni: cilium
     weave.works/capi: bootstrap
+  name: mvm-test
+  namespace: default
 spec:
   clusterNetwork:
     pods:
       cidrBlocks:
-        - 172.25.0.0/16
+      - 172.25.0.0/16
     services:
       cidrBlocks:
-        - 172.26.0.0/16
+      - 172.26.0.0/16
   controlPlaneRef:
     apiVersion: controlplane.cluster.x-k8s.io/v1beta1
     kind: KubeadmControlPlane
