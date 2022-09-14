@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  creationTimestamp: null
+  name: weaveworks-charts
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://weaveworks.github.io/weave-gitops-profile-examples/
+status: {}
