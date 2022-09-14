@@ -12,19 +12,24 @@ spec:
       required: true
       description: This is used for the cluster naming.
     - name: KUBERNETES_VERSION
+      required: true
       description: Kubernetes version to use for the cluster
       options: ["1.23.5"]
     - name: CONTROL_PLANE_MACHINE_COUNT
+      required: true
       description: Number of control planes
       options: ["1", "3"]
     - name: WORKER_MACHINE_COUNT
+      required: true
       description: Number of physical worker nodes
       options: ["1"]
     - name: VM_HOST_IP
+      required: true
       description: IP for the physical machine that will be the host for the microVM nodes.
     - name: CONTROL_PLANE_VIP
+      required: true
       description: IP for the Kubernetes Endpoint. For demo use 192.168.10.25
-    - name: CONTAINER_NETWORKING 
+    - name: CONTAINER_NETWORKING
       description: Select the CNI plugin to use
       options: ['cilium']
   resourcetemplates:
@@ -40,10 +45,10 @@ spec:
     - apiVersion: cluster.x-k8s.io/v1beta1
       kind: Cluster
       metadata:
+        name: "${CLUSTER_NAME}"
       labels:
           weave.works/capi: bootstrap
           cni: ${CONTAINER_NETWORKING}
-      name: "${CLUSTER_NAME}"
       spec:
       clusterNetwork:
           pods:
