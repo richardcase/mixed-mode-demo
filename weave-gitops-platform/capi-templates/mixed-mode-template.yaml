@@ -50,21 +50,21 @@ spec:
           weave.works/capi: bootstrap
           cni: ${CONTAINER_NETWORKING}
       spec:
-      clusterNetwork:
-          pods:
-          cidrBlocks:
-              - 172.25.0.0/16
-          services:
+        clusterNetwork:
+            pods:
             cidrBlocks:
-                - 172.26.0.0/16
-      infrastructureRef:
-          apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
-          kind: MicrovmCluster
-          name: "${CLUSTER_NAME}"
-      controlPlaneRef:
-          kind: KubeadmControlPlane
-          apiVersion: controlplane.cluster.x-k8s.io/v1beta1
-          name: "${CLUSTER_NAME}-control-plane"
+                - 172.25.0.0/16
+            services:
+              cidrBlocks:
+                  - 172.26.0.0/16
+        infrastructureRef:
+            apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+            kind: MicrovmCluster
+            name: "${CLUSTER_NAME}"
+        controlPlaneRef:
+            kind: KubeadmControlPlane
+            apiVersion: controlplane.cluster.x-k8s.io/v1beta1
+            name: "${CLUSTER_NAME}-control-plane"
 
     - apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
       kind: MicrovmCluster
