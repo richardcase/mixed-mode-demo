@@ -52,8 +52,8 @@ spec:
       spec:
         clusterNetwork:
             pods:
-            cidrBlocks:
-                - 172.25.0.0/16
+              cidrBlocks:
+                  - 172.25.0.0/16
             services:
               cidrBlocks:
                   - 172.26.0.0/16
