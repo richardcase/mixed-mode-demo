@@ -26,8 +26,8 @@ spec:
               "bootstrap",
               "github",
               "--kubeconfig=/etc/gitops/value",
-              "--owner=weavegitops",
-              "--repository=demo2-repo",
+              "--owner=richardcase",
+              "--repository=mixed-mode-demo",
               "--path=./clusters/default/{{ .ObjectMeta.Name }}",
             ]
           envFrom:
