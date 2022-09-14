@@ -46,9 +46,9 @@ spec:
       kind: Cluster
       metadata:
         name: "${CLUSTER_NAME}"
-      labels:
-          weave.works/capi: bootstrap
-          cni: ${CONTAINER_NETWORKING}
+        labels:
+            weave.works/capi: bootstrap
+            cni: ${CONTAINER_NETWORKING}
       spec:
         clusterNetwork:
             pods:

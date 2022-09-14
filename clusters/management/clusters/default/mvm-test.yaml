@@ -12,12 +12,12 @@ spec:
 ---
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
-labels:
-  cni: cilium
-  weave.works/capi: bootstrap
 metadata:
   name: mvm-test
   namespace: default
+  labels:
+    cni: cilium
+    weave.works/capi: bootstrap
 spec:
   clusterNetwork:
     cidrBlocks:
