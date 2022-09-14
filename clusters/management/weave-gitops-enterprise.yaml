@@ -42,6 +42,8 @@ spec:
         # -- Can be changed depending on your git repo structure
         # repositoryPath: ./clusters/management/clusters
         # repositoryClustersPath: ./cluster
+      cluster-controller:
+        enabled: true
       git:
         type: github
         # -- Change if using on-prem github/gitlab
