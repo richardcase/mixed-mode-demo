@@ -37,8 +37,8 @@ spec:
       kind: GitopsCluster
       metadata:
         name: "${CLUSTER_NAME}"
-        labels:
-          weave.works/capi: bootstrap
+        #labels:
+        #  weave.works/capi: bootstrap
       spec:
         capiClusterRef:
           name: "${CLUSTER_NAME}"
@@ -47,8 +47,8 @@ spec:
       metadata:
         name: "${CLUSTER_NAME}"
         labels:
-            weave.works/capi: bootstrap
             cni: ${CONTAINER_NETWORKING}
+            #weave.works/capi: bootstrap
       spec:
         clusterNetwork:
             pods:
