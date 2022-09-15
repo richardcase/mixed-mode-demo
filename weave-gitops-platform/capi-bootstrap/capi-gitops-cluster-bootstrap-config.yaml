@@ -13,7 +13,7 @@ spec:
     backoffLimit: 12
     spec:
       containers:
-        - image: ghcr.io/fluxcd/flux-cli:v0.33.0
+        - image: ghcr.io/fluxcd/flux-cli:v0.34.0
           imagePullPolicy: Always
           name: flux-bootstrap
           resources: {}
